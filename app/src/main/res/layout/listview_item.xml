@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="news"
+            type="org.lenve.databinding1.data.DataBindNews"/>
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="@{news.onItemTip}"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/msg_pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="3dip"
+        app:pic="@{news.logofile}"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/msg_title"
+            android:maxLines="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_alignParentLeft="true"
+            android:text="@{news.title}"
+            android:textColor="@color/black_cart"/>
+
+        <TextView
+            android:id="@+id/msg_author"
+            android:layout_toRightOf="@id/msg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ems="39"
+            android:textColor="@color/text_gray"
+            android:text="@{news.summary}"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:textColor="@color/text_gray"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="@{news.publishdate}"
+            android:textSize="16sp" />"
+    </LinearLayout>
+    <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/right_arrow"
+        />
+</LinearLayout>
+</layout>

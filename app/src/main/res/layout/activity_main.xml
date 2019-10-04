@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+
+        <import
+            alias="Lenve"
+            type="org.lenve.databinding1.data.UserEntity"/>
+
+        <variable
+            name="user"
+            type="Lenve"/>
+    </data>
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="org.lenve.databinding1.MainActivity">
+        <include
+            layout="@layout/title_top"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`username is :`+user.username}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.nickname}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@{user.age &lt; 30 ? 0xFF0000FF:0xFFFF0000}"
+            android:text="@{String.valueOf(user.age)}"/>
+    </LinearLayout>
+</layout>

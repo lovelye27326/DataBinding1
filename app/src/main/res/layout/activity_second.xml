@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="user"
+            type="org.lenve.databinding1.data.User"/>
+        <variable name="testClick" type="android.view.View.OnClickListener"/>
+        <import type="android.view.View"/>
+    </data>
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="org.lenve.databinding1.MainActivity">
+        <include
+            layout="@layout/title_top"/>
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:photo="@{user.photo}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.username}"/>
+
+        <Button
+            android:id="@+id/btn_test"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="@{testClick}"
+            android:text="跳转MainActivity"/>
+
+        <Button
+            android:id="@+id/btn_test1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="@{testClick}"
+            android:text="跳转DayNewsActivity"/>
+    </LinearLayout>
+</layout>

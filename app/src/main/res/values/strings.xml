@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DataBinding1</string>
+
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing_label">刷新\u2026</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_refreshing_label">加载中\u2026</string>
+
+    <string name="home">首页</string>
+    <string name="back">后退</string>
+    <string name="forward">前进</string>
+    <string name="refresh">刷新</string>
+    <string name="menu">菜单</string>
+
+    <string name="share">分享</string>
+    <string name="message">消息</string>
+    <string name="news">新闻</string>
+    <string name="clean_chche">清除缓存</string>
+</resources>
